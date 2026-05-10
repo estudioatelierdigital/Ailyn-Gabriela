@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #d8cec2;
+    overflow-x: hidden;
+    font-family: 'Cormorant Garamond', serif;
+    color: #5f4b44;
+}
+
+/* ========================= */
+/* CONTENEDOR */
+/* ========================= */
+
+.invitation-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .15);
+    background-color: #FFF0F5;
+}
+
+/* ========================= */
+/* BLOQUES PAPEL */
+/* ========================= */
+
+.paper-block {
+    margin-top: -100px; /* ACTUALIZADO: Subimos más el papel para tapar el hueco */
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    z-index: 100;
+}
+
+/* ========================= */
+/* IMAGEN PAPEL */
+/* ========================= */
+
+.paper-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ========================= */
+/* CONTENIDO PAPEL */
+/* ========================= */
+
+.paper-content {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    padding: 150px 60px; /* ACTUALIZADO: Más espacio arriba para que el texto no se corte al subir el papel */
+}
+
+/* ========================= */
+/* HERO (SECCIÓN PRINCIPAL) */
+/* ========================= */
+
+.hero-content {
+    text-align: center;
+    padding-top: 160px; /* Espacio para la flor grande */
+}
+
+/* ========================= */
+/* FLORES (ESQUINA SUPERIOR IZQUIERDA) */
+/* ========================= */
+
+.flower {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    opacity: .95;
+}
+
+.flower-top-left {
+    width: 450px;
+    top: 100px;
+    left: -30px;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+/* ========================= */
+/* TEXTOS HERO */
+/* ========================= */
+
+.quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 55px;
+    color: #6f5a52;
+    padding: 0 10px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #8f6970;
+}
+
+.main-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5.5rem;
+    line-height: .9;
+    color: #E598A8;
+}
+
+.lastname {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    margin-bottom: 55px;
+    color: #5f4b44;
+}
+
+.parents p {
+    font-size: 1.1rem;
+    color: #6f5a52;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.parents h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #8f6970;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.parents span {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.8rem;
+    color: #b57c88;
+}
+
+/* ========================= */
+/* FECHA */
+/* ========================= */
+
+.date-section {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.month {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
+
+.date-circle {
+    width: 140px;
+    height: 140px;
+    margin: 25px auto;
+    border-radius: 50%;
+    border: 2px solid rgba(165, 124, 133, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #7e6059;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(4px);
+}
+
+.day {
+    display: block;
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+}
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
+
+.music-btn, .location-btn, .rsvp-btn {
+    margin-top: 50px;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 40px;
+    background: #FFD1DC;
+    color: #5A3A4A;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(184, 133, 143, .3);
+}
+
+.music-btn-float {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 999999 !important;
+    background-color: #b8858f !important;
+    color: white !important;
+    border-radius: 50% !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.music-btn:hover, .location-btn:hover, .rsvp-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ========================= */
+/* FOTOS */
+/* ========================= */
+
+.photo-section {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    margin-top: -190px;
+    margin-bottom: -210px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.photo-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ========================= */
+/* TÍTULOS DE SECCIÓN */
+/* ========================= */
+
+.section-title {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    color: #E598A8;
+}
+
+/* ========================= */
+/* COUNTDOWN */
+/* ========================= */
+
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+}
+
+.count-box {
+    width: 95px;
+    height: 95px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, .25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-box span {
+    font-size: 2.2rem;
+    color: #a07178;
+    font-weight: bold;
+}
+
+.count-box p {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+/* ========================= */
+/* RECEPCIÓN */
+/* ========================= */
+
+.reception-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.salon-name {
+    font-size: 2.4rem;
+    color: #E598A8;
+}
+
+.salon-subtitle {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.reception-time {
+    margin-top: 35px;
+    font-size: 2rem;
+    color: #a07178;
+}
+
+/* ========================= */
+/* TIMELINE (ITINERARIO) */
+/* ========================= */
+
+.timeline-block {
+    padding-bottom: 120px;
+}
+
+.timeline-wrapper {
+    position: relative;
+    width: 100%;
+    padding-left: 55px;
+    margin-top: 50px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    width: 4px;
+    height: 100%;
+    background: #d9c8be;
+    border-radius: 20px;
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    width: 4px;
+    height: 0%;
+    background: #b8858f;
+    border-radius: 20px;
+    transition: height .15s linear;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 70px;
+    opacity: .3;
+    transform: translateY(50px);
+    transition: all .8s ease;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -43px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f5ece3;
+    border: 4px solid #b8858f;
+    z-index: 5;
+    transition: .4s;
+}
+
+.timeline-item.active .timeline-dot {
+    background: #b8858f;
+    transform: scale(1.2);
+    box-shadow: 0 0 18px rgba(184, 133, 143, .5);
+}
+
+.timeline-hour {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #9f7178;
+    font-weight: bold;
+}
+
+.timeline-content h3 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.timeline-icon {
+    margin-right: 12px;
+    color: #b8858f;
+    font-size: 1.2rem;
+}
+
+/* ========================= */
+/* DRESS CODE */
+/* ========================= */
+
+.dresscode-style {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #E598A8;
+}
+
+.dresscode-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.color-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .08);
+}
+
+.rosa { background: #efbfd0; }
+.lila { background: #d8c2e0; }
+.crema { background: #f0dfca; }
+.coral { background: #ecb09e; }
+
+/* ========================= */
+/* ICONO DE VESTIMENTA */
+/* ========================= */
+
+.dress-code-icon {
+    display: block !important;
+    width: 100%;
+    text-align: center !important;
+    font-size: 3.5rem;
+    color: #E598A8;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* ========================= */
+/* REGALOS Y RSVP */
+/* ========================= */
+
+.gift-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.gift-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.gift-title {
+    margin-top: 35px;
+    font-size: 2.5rem;
+    color: #E598A8;
+}
+
+.gift-brands {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.rsvp-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.rsvp-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.final-text {
+    margin-top: 80px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #E598A8;
+    text-align: center;
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:600px) {
+    .paper-content {
+        padding: 200px 28px; /* Ajuste responsive también */
+    }
+
+    .flower-top-left {
+        width: 450px;
+        top: 80px;
+        left: -20px;
+    }
+
+    .main-name {
+        font-size: 4.3rem;
+    }
+
+    .photo-section {
+        height: 500px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .count-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .count-box span {
+        font-size: 1.8rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .final-text {
+        font-size: 3.6rem;
+    }
+}
+
+/* CONTENIDO DESPUÉS DE FOTO */
+.photo-section + .paper-block .paper-content {
+    padding-top: 240px; /* Ajustado para dar más aire tras la foto */
+}
+
+/* ========================= */
+/* ICONO DE REGALO */
+/* ========================= */
+
+.gift-icon {
+    display: block !important;
+    width: 100%;
+    text-align: center !important;
+    font-size: 3.5rem;
+    color: #E598A8;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
